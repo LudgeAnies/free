@@ -44,4 +44,3 @@ class Database:
                         mute_time * 60
                 ), user_id,)
             ) # мут в минутах
-        # 30:20

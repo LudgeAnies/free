@@ -10,7 +10,8 @@ bot = Bot(token=param.TOKEN)
 dp = Dispatcher(bot)
 db = Database('base.db')
 
-@dp.message_handler(commands=["mute"])
+
+@dp.message_handler(commands=["mute"], commands_prefix='/')
 async def mute_days_handler(message: types.Message):
     if str(message.from_user.id) == param.ADMIN_ID:
         if not message.reply_to_message:
